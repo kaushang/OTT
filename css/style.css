@@ -12,10 +12,24 @@ body {
 
 /* Header Section Start */
 .header {
-    background-image: url('../images/header.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    position: relative;
+    z-index: 1;
+    background-size: 50% 50%;
     height: 100vh;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/Untitled\ design.png');
+    background-repeat: repeat;
+    background-size: 50% 50%;
+    opacity: 0.3;
+    z-index: -1;
 }
 
 .navbar {
@@ -24,15 +38,20 @@ body {
 }
 
 .login-btn {
-    /* display: inline-block; */
-    /* border: none; */
-    /* background-color: #000000; */
-    /* color: #fff; */
-    padding: 20px 30px;
-    font-size: 15px;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 700;
     letter-spacing: 1px;
     cursor: pointer;
-    /* border: 1px solid red; */
+    background-color: #09fafead;
+    color: #000000;
+    margin: 20px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    opacity: 0.7;
 }
 
 .header-content {
@@ -42,7 +61,8 @@ body {
 }
 
 .header-content h4 {
-    color: #00ed82;
+    color: #ffde59;
+    font-weight: 600;
     margin-top: 40px;
 }
 
@@ -70,12 +90,13 @@ body {
     border: none;
     border-radius: 10px;
     transition: all 0.3s ease;
+    background-color:#09fafead;
+    
 }
 
 .head-btn:hover {
     cursor: pointer;
-    background-color: #d3cccc;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .header-text-3 {
@@ -84,35 +105,35 @@ body {
     color: #d3cccc;
 }
 
-@media screen and (max-width: 720px){
-    .header{
+@media screen and (max-width: 720px) {
+    .header {
         background-size: contain;
         background-position: center;
     }
 
-    .navbar{
+    .navbar {
         justify-content: center;
     }
 
-    .login-btn{
+    .login-btn {
         font-size: 25px;
     }
 
-    .header-content img{
+    .header-content img {
         width: 200px;
     }
 
-    .header-text-1{
+    .header-text-1 {
         font-size: 15px;
     }
 
-    .header-text-2{
+    .header-text-2 {
         font-size: 15px;
         max-width: 400px;
         text-align: center;
     }
 
-    .head-btn{
+    .head-btn {
         padding: 15px 35px;
     }
 }
@@ -138,13 +159,13 @@ body {
 }
 
 .sub-heading-center h4 {
-    color: #00ed82;
+    color: #09f8fe;
 }
 
 .sub-heading-center h3 {
     letter-spacing: 5px;
     font-weight: 400;
-    margin-top: 10px;
+    margin-top: 10px;   
 }
 
 .sub-heading-center a {
@@ -178,13 +199,13 @@ body {
     text-align: center;
 }
 
-@media screen and (max-width: 720px){
-    .sub-heading{
+@media screen and (max-width: 720px) {
+    .sub-heading {
         display: flex;
         flex-direction: column;
     }
 
-    .sub-heading img{
+    .sub-heading img {
         margin-bottom: 20px;
 
     }
@@ -203,7 +224,7 @@ body {
 }
 
 .plans h4 {
-    color: #00ed82;
+    color: #09f8fe;
     font-size: 12px;
     letter-spacing: 1px;
 }
@@ -273,20 +294,18 @@ body {
     font-weight: bold;
 }
 
-@media screen and (max-width: 720px){
-    .plans-text{
+@media screen and (max-width: 720px) {
+    .plans-text {
         font-size: 40px;
         text-align: center;
         margin-bottom: 20px;
     }
 
-    .plans-paragraph{
+    .plans-paragraph {
         font-size: 20px;
     }
 
-    .cards{
-        /* display: grid; */
-        /* grid-template-columns: repeat(4, 1fr); */
+    .cards {
         height: 100%;
         width: 100%;
         display: flex;
@@ -296,7 +315,7 @@ body {
     .card-1,
     .card-2,
     .card-3,
-    .card-4{
+    .card-4 {
         height: 500px;
         background-size: cover;
         background-position: center;
@@ -307,8 +326,8 @@ body {
 
 }
 
-@media screen and (max-width: 1120px){
-    .cards{
+@media screen and (max-width: 1120px) {
+    .cards {
         height: 100%;
         width: 100%;
         display: flex;
@@ -318,7 +337,7 @@ body {
     .card-1,
     .card-2,
     .card-3,
-    .card-4{
+    .card-4 {
         height: 700px;
         background-size: cover;
         background-position: center;
@@ -336,8 +355,8 @@ body {
     padding: 40px;
 }
 
-.live-tv-border{
-    border: 5px solid #00ed82;
+.live-tv-border {
+    border: 5px solid #09f8fe;
     border-radius: 10px;
     padding: 100px;
     display: flex;
@@ -346,19 +365,19 @@ body {
     justify-content: center;
 }
 
-.live-tv-border h4{
-    color: #00ed82;
+.live-tv-border h4 {
+    color: #09f8fe;
     letter-spacing: 1px;
 }
 
-.live-tv-text{
+.live-tv-text {
     font-size: 65px;
     font-weight: bold;
     margin-top: 30px;
     letter-spacing: 1px;
 }
 
-.live-tv-paragraph{
+.live-tv-paragraph {
     max-width: 800px;
     font-size: 20px;
     font-weight: bold;
@@ -367,48 +386,48 @@ body {
     line-height: 2;
 }
 
-.live-tv-terms{
+.live-tv-terms {
     font-size: 10px;
     color: #d3cccc;
     margin-top: 30px;
 }
 
-.live-tv-border a{
+.live-tv-border a {
     color: #fff;
     font-weight: bold;
     letter-spacing: 1px;
     margin-top: 30px;
 }
 
-@media screen and (max-width: 1064px){
-    .live-tv-text{
+@media screen and (max-width: 1064px) {
+    .live-tv-text {
         font-size: 50px;
         text-align: center;
     }
 }
 
-@media screen and (max-width: 720px){
+@media screen and (max-width: 720px) {
 
-    .live-tv-border{
+    .live-tv-border {
         padding: 50px;
     }
 
-    .live-tv-text{
+    .live-tv-text {
         font-size: 40px;
         text-align: center;
     }
 
-    .live-tv-paragraph{
+    .live-tv-paragraph {
         font-size: 15px;
         line-height: 1.5;
         text-align: center;
     }
 
-    .live-tv-terms{
+    .live-tv-terms {
         text-align: center;
     }
 
-    .live-tv-border a{
+    .live-tv-border a {
         font-size: 15px;
         text-align: center;
     }
@@ -418,45 +437,56 @@ body {
 
 
 /* Live Sport Section Start */
-.live-sport{
-    background-image: url('../images/live-sports.jpg');
-    background-size: cover;
-    background-position: center;
+.live-sport {
     height: 800px;
     position: relative;
+    z-index: 1;
 }
 
-.live-sport-contents{
-    /* border: 2px solid red; */
+.live-sport::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/kaalu.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.4;
+    z-index: -1;
+    /* Ensure the background is behind the content */
+}
+
+.live-sport-contents {
     position: absolute;
     top: 150px;
     left: 100px;
     max-width: 550px;
 }
 
-.live-sport-text{
+.live-sport-text {
     font-weight: bold;
     font-size: 70px;
 }
 
-.live-sport-paragraph{
+.live-sport-paragraph {
     font-size: 20px;
     font-weight: bold;
     letter-spacing: 1px;
     line-height: 2;
 }
 
-.live-sport-logos{
+.live-sport-logos {
     position: absolute;
     top: 400px;
     left: 100px;
-    /* border: 2px solid yellow; */
     width: 300px;
     display: flex;
     justify-content: space-between;
 }
 
-.live-sport-logos div{
+.live-sport-logos div {
     background-image: url("../images/network-logo-bg.png");
     background-position: center;
     background-size: cover;
@@ -467,12 +497,11 @@ body {
     align-items: center;
 }
 
-.live-sport-logos div img{
+.live-sport-logos div img {
     width: 40px;
 }
 
-.live-sports-terms{
-    /* border:  2px solid tomato; */
+.live-sports-terms {
     font-size: 10px;
     color: #d3cccc;
     position: absolute;
@@ -480,82 +509,82 @@ body {
     left: 100px;
 }
 
-@media screen and (max-width: 720px){
+@media screen and (max-width: 720px) {
 
-    .live-sport-contents{
+    .live-sport-contents {
         left: 30px;
         margin: 0 auto;
         text-align: center;
         max-width: 400px;
     }
-    .live-sport-text{
+
+    .live-sport-text {
         font-size: 50px;
         text-align: center;
     }
 
-    .live-sport-paragraph{
+    .live-sport-paragraph {
         font-size: 15px;
         text-align: center;
     }
 
-    .live-sports-terms{
+    .live-sports-terms {
         text-align: center;
     }
 }
+
 /* Live Sport Section End */
 
 
 /* Footer Section Start */
-.footer{
-    background-color: #f0eeee;
-    color: #000000;
+.footer {
+    background-color: #000000;
+    color: white;
     font-weight: bold;
-    border: 2px solid #f0eeee;
+    border-top: 1px solid #f0eeee;
 }
 
-.footer-links{
+.footer-links {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
 }
 
-.footer-links ul li{
+.footer-links ul li {
     list-style-type: none;
     margin-bottom: 5px;
 }
 
-.footer-links ul li a{
-    color: #000000;
+.footer-links ul li a {
+    color: white;
     text-decoration: none;
     font-weight: 400;
 }
 
-.footer-spacing{
+.footer-spacing {
     max-width: 1000px;
     margin: auto;
-    /* border: 2px solid yellow; */
 }
 
-.footer-line{
+.footer-line {
     border-top: 1px solid #d3cccc;
     margin-top: 30px;
     width: 100%;
 }
 
-.footer-social-icons{
+.footer-social-icons {
     margin-top: 30px;
 }
 
-.fa-brands{
+.fa-brands {
     font-size: 25px;
     color: #807c7c;
     margin-right: 20px;
     margin-bottom: 30px;
 }
 
-@media screen and (max-width: 720px){
-    .footer-links{
-        /* display: flex; */
+@media screen and (max-width: 720px) {
+    .footer-links {
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -566,7 +595,7 @@ body {
     .ul-2,
     .ul-3,
     .ul-4,
-    .ul-5{
+    .ul-5 {
         margin-bottom: 20px;
         font-size: 20px;
         width: 100%;
@@ -576,16 +605,17 @@ body {
         align-items: center;
     }
 
-    .footer-social-icons{
+    .footer-social-icons {
         text-align: center;
     }
 
 }
+
 /* Footer Section End */
 
 
 /* Login Form Section Start */
-.login-form{
+.login-form {
     display: none;
     position: fixed;
     top: 2%;
@@ -596,60 +626,53 @@ body {
     background-color: #fff;
     color: black;
     animation: loginanimation 1s;
-    /* display: flex !important;
-    justify-content: center;
-    align-items: center; */
 }
 
-.login-form-body{
+.login-form-body {
     padding: 50px;
 }
 
-.login-form-body h2{
+.login-form-body h2 {
     margin-bottom: 30px;
     color: black;
-    /* font-size: 20px; */
-    /* font-weight: bold; */
 }
 
-.login-form-body label{
+.login-form-body label {
     font-weight: bold;
-    /* margin-bottom: 30px !important; */
 }
 
-.login-form-body input{
+.login-form-body input {
     font-size: 15px;
     padding: 12px;
     width: 100%;
     margin-top: 15px;
     margin-bottom: 10px;
-    border-color: #00ed82;
     border-radius: 5px;
     opacity: 0.5;
-    /* border: none; */
 }
-.login-form-body input:focus {
-    border-color: #00ed82;
-    /* border-radius: 50px; */
-}
+
+
+
 .login {
     display: flex;
     justify-content: space-between;
 }
-.fa-solid{
+
+.fa-solid {
     height: fit-content;
     font-size: 30px;
 }
-.fa-solid:hover{
+
+.fa-solid:hover {
     cursor: pointer;
 }
 
-.login-reset{
+.login-reset {
     color: #0000EE;
     margin-top: 10px;
-    /* font-weight: bold; */
 }
-.login-btn-1{
+
+.login-btn-1 {
     width: 100%;
     padding: 16px;
     border-radius: 8px;
@@ -660,25 +683,30 @@ body {
     font-weight: bold;
     font-size: 24px;
 }
-.login-btn-1:hover{
+
+.login-btn-1:hover {
     background-color: #363636;
-    box-shadow: 0px 0px 8px #00ed82;
+    box-shadow: 0px 0px 6px #3c3c3c;
     cursor: pointer;
 }
 
-.login-footer{
+.login-footer {
     text-align: center;
     margin-top: 20px;
 }
+
 .free-trial-link {
     color: #0000EE;
 }
-@keyframes loginanimation{
-    from{
+
+@keyframes loginanimation {
+    from {
         opacity: 0;
     }
-    to{
+
+    to {
         opacity: 1;
     }
 }
+
 /* Login Form Section End */
